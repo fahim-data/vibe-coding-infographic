@@ -15,18 +15,18 @@ html{scroll-behavior:smooth}
   --surf2:#e8edf6;
   --border:#d6dde9;
   --border2:#b8c3d4;
-  --text:#1a2535;
-  --muted:#6a7e95;
-  --amber:#b86a00;
-  --amber-d:rgba(184,106,0,0.10);
-  --blue:#2272d8;
-  --blue-d:rgba(34,114,216,0.09);
-  --purple:#6644c0;
-  --purple-d:rgba(102,68,192,0.09);
-  --green:#1a9845;
-  --green-d:rgba(26,152,69,0.09);
-  --red:#c03030;
-  --red-d:rgba(192,48,48,0.07);
+  --text:#2d150a;
+  --muted:#9b6070;
+  --amber:#cfa838;
+  --amber-d:rgba(207,168,56,0.12);
+  --blue:#e896a8;
+  --blue-d:rgba(232,150,168,0.12);
+  --purple:#6e4a6c;
+  --purple-d:rgba(110,74,108,0.10);
+  --green:#b54e1e;
+  --green-d:rgba(181,78,30,0.10);
+  --red:#b54e1e;
+  --red-d:rgba(181,78,30,0.08);
 }
 body{
   background:var(--bg);
@@ -1140,70 +1140,70 @@ const TOOLS=[
     desc:"An AI-first code editor built on VS Code. It indexes your entire codebase so the model understands full project context — not just the file you have open. Its Composer feature lets you describe a multi-file change in plain English and executes it across your whole project at once.",
     aud:'Software developers, data engineers, ML engineers who write code daily.',
     ex:'"Refactor all my data ingestion functions to use async/await and add error handling."',
-    madeWith:null
+    madeWith:null,
   },
   {
     name:'GitHub Copilot',cat:'ide',
     desc:"An AI assistant that extends your existing editor rather than replacing it. Works across VS Code, PyCharm, JetBrains, Neovim, and Xcode. Suggests code inline as you type, answers questions in chat, and can turn GitHub Issues into pull requests autonomously.",
     aud:'Developers at any level — especially those already working in the GitHub ecosystem.',
     ex:"You're writing a pandas pipeline. Copilot predicts the next transformation before you finish typing, including the correct column names from your existing dataframe.",
-    madeWith:null
+    madeWith:null,
   },
   {
     name:'Google Antigravity',cat:'ide',
     desc:"An agent-first IDE built on VS Code (launched November 2025) with a split dual-view interface: an Editor for writing code and a Manager panel for orchestrating multiple parallel AI agents. Each agent produces verifiable artifacts — task plans, screenshots, and browser recordings — so you can inspect what it actually did.",
     aud:'Developers who want to delegate large multi-step tasks across editor, terminal, and browser simultaneously.',
     ex:'"Build a new user auth flow, test it in the browser, and fix any errors you find." Spawns separate agents for coding, terminal execution, and browser verification in parallel.',
-    madeWith:null
+    madeWith:null,
   },
   {
     name:'Replit',cat:'bld',
     desc:"A cloud-based browser IDE where you can write, run, and deploy code without installing anything locally. Its Agent can take a plain-language description and build a working application end-to-end — environment setup, code, and deployment included. The only app builder in this list with genuine Python support.",
     aud:'Students, data practitioners, hobbyists, developers who want zero local setup.',
     ex:'"Build me a Streamlit dashboard that reads a CSV, shows a bar chart of sales by region, and lets me filter by date."',
-    madeWith:'https://replit.com/community'
+    madeWith:'https://replit.com/community',
   },
   {
     name:'Bolt.new',cat:'bld',
     desc:"A browser-based full-stack builder that generates complete web applications from a single prompt. Real-time live preview updates as the AI builds. Tight integration with the Vercel/Next.js ecosystem. Supports Figma import — paste a design, get working code.",
     aud:'Frontend developers, product teams, technical founders building web apps.',
     ex:'"Here\'s my Figma mockup of a SaaS dashboard. Build it with user auth, a data table, and a dark mode toggle."',
-    madeWith:'https://bolt.new/showcase'
+    madeWith:'https://bolt.new/showcase',
   },
   {
     name:'Lovable',cat:'bld',
     desc:"The most accessible builder in this list. Describe an app in plain English; Lovable builds it and exports production-ready code directly to your GitHub repo. Produces the best UI output quality of any tool here. No technical knowledge required to get started.",
     aud:'Non-technical founders, designers, product managers who want to ship without an engineering team.',
     ex:'"Build a job board where companies can post listings and candidates can apply. Include search and filters."',
-    madeWith:'https://madewithlovable.com'
+    madeWith:'https://madewithlovable.com',
   },
   {
     name:'Base44',cat:'bld',
     desc:"Acquired by Wix in mid-2025. Generates frontend, backend, database, and authentication from a plain-language prompt with no external services required. Comes with 6,000+ integrations, built-in analytics, and role-based access control out of the box.",
     aud:'Non-technical founders and small teams who need internal tools or customer-facing apps quickly.',
     ex:'"Build a CRM with a contact list, deal pipeline, and email notification when a deal moves stage."',
-    madeWith:null
+    madeWith:null,
   },
   {
     name:'Claude Code',cat:'trm',
     desc:"Anthropic's terminal-based coding agent. Runs in your command line, reads your local filesystem, and can plan and execute complex multi-step tasks across your entire codebase autonomously. Asks for permission before making changes. Produces the best reasoning quality of any terminal agent currently available.",
     aud:'Senior developers, ML engineers, data engineers who are comfortable in the terminal.',
     ex:'"Find all places in this repo where we\'re using the deprecated sklearn API, update them to the new interface, and run the test suite."',
-    madeWith:null
+    madeWith:null,
   },
   {
     name:'Gemini CLI',cat:'trm',
     desc:"Google's open-source terminal agent. Similar in concept to Claude Code — runs in your terminal, reads your codebase, executes tasks with your approval. The free tier is genuinely generous. Best option for large codebases given its 1M token context window. Integrates natively with Google Cloud, BigQuery, and Firebase.",
     aud:'Developers on Google Cloud, engineers working with large codebases, anyone wanting terminal-agent power for free.',
     ex:'"I have a BigQuery table with 90 days of clickstream data. Write a Python script that pulls it, calculates weekly retention cohorts, and outputs a CSV."',
-    madeWith:null
+    madeWith:null,
   },
   {
     name:'OpenAI Codex',cat:'trm',
     desc:"An open-source terminal agent built in Rust that runs entirely locally. Free for ChatGPT Plus subscribers. Supports parallel sub-agents for breaking large tasks into concurrent workstreams. Native GitHub integration means it can operate at the pull-request level — reading diffs, writing reviews, and opening PRs.",
     aud:'Developers already in the OpenAI/ChatGPT ecosystem who want terminal agent capability without extra cost.',
     ex:'"Review the last three commits, identify any functions without tests, and write the missing tests."',
-    madeWith:null
+    madeWith:null,
   }
 ];
 
